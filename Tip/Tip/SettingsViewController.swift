@@ -10,10 +10,16 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var defaultTip: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let defaults = UserDefaults.standard
+        
+        defaultTip.selectedSegmentIndex = defaults.integer(forKey: "newDefault")
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +38,14 @@ class SettingsViewController: UIViewController {
     }
     */
 
-    @IBAction func percentage(_ sender: AnyObject) {
+    @IBAction func defaultPercentage(_ sender: AnyObject) {
         
-        let defults = UserDefaults.standard
+        let defaults = UserDefaults.standard
         
-        defults.set(0.25, forKey: "new")
+        defaults.set(defaultTip.selectedSegmentIndex, forKey: "newDefault")
         
-        defults.synchronize()
+        defaults.synchronize()
     }
+    
+    
 }

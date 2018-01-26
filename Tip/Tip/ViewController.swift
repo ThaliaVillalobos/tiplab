@@ -18,8 +18,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        let defaults = UserDefaults.standard
+        
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "newDefault")
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let defaults = UserDefaults.standard
+        
+        tipControl.selectedSegmentIndex = defaults.integer(forKey: "newDefault")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -31,11 +43,7 @@ class ViewController: UIViewController {
     }
  
     @IBAction func calculateTip(_ sender: AnyObject) {
-        
-        let defaults = UserDefaults.standard
-        
-        let newTip = defaults.double(forKey:"new")
-        
+
         let tipPercentages = [0.18, 0.2, 0.25]
         
         let bill = Double(billField.text!) ?? 0

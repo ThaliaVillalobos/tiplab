@@ -46,7 +46,7 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
-                                <color key="tintColor" red="0.40201830192887067" green="0.36371479609798119" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" red="0.4036601185798645" green="0.36444133520126343" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="98q-VG-D4e"/>
                                 </connections>
@@ -94,6 +94,7 @@
                                     <segue destination="99H-Wb-QJA" kind="push" id="clp-DD-ddm"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" red="0.40366011860000001" green="0.36444133519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -128,6 +129,7 @@
                                     <segment title="20%"/>
                                     <segment title="25%"/>
                                 </segments>
+                                <color key="tintColor" red="0.40366011860000001" green="0.36444133519999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="defaultPercentage:" destination="99H-Wb-QJA" eventType="valueChanged" id="iWy-ka-S1Q"/>
                                 </connections>

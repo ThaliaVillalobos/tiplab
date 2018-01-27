@@ -29,6 +29,9 @@ class ViewController: UIViewController {
         let defaults = UserDefaults.standard
         
         tipControl.selectedSegmentIndex = defaults.integer(forKey: "newDefault")
+        
+        calculating()
+        
     }
     
     
@@ -43,7 +46,11 @@ class ViewController: UIViewController {
     }
  
     @IBAction func calculateTip(_ sender: AnyObject) {
-
+        
+        calculating()
+    }
+ 
+    func calculating(){
         let tipPercentages = [0.18, 0.2, 0.25]
         
         let bill = Double(billField.text!) ?? 0
@@ -53,7 +60,5 @@ class ViewController: UIViewController {
         tipLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
     }
- 
-    
 }
 
